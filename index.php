@@ -11,8 +11,13 @@
  * @package copious
  * @subpackage bare
  */
-remove_filter ('the_content', 'wpautop');
-remove_filter ('the_content', 'wptexturize');
+remove_filter( 'the_content', 'wptexturize'        );
+remove_filter( 'the_content', 'convert_smilies'    );
+remove_filter( 'the_content', 'convert_chars'      );
+remove_filter( 'the_content', 'wpautop'            );
+remove_filter( 'the_content', 'shortcode_unautop'  );
+remove_filter( 'the_content', 'prepend_attachment' );
+remove_filter( 'the_content', 'capital_P_dangit'   );
 the_post();
 the_content();
 ?>
